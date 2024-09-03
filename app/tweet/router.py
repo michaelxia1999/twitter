@@ -32,7 +32,7 @@ async def get_tweets_route(user_id: int | None = Query(None), session_user_id: i
         db_tweets = await get_tweets(db=db)
 
     elif user_id == 0:
-        print(session_user_id)
+        # this means get all tweets from session user
         db_tweets = cast(list[Tweet], await get_tweets_from_user(user_id=session_user_id, db=db))
 
     else:
