@@ -8,8 +8,8 @@ from typing import Any
 # Add all possible api responses to openapi schema for better api documentation, frontenders are going to love this!
 def generate_responses(input: bool, auth: bool, responses: list[tuple[int, Any]]) -> dict:
     # Input means this request takes in user input(body, header, query, path), so 400 with Error is a possible response
-    # Auth means this requires Session-ID header, so 401 is a possible response
-    # Responses take in a list of (status_code, responses) that is specific to each api request
+    # Auth means this request takes in Session-ID header, so 401 is a possible response
+    # Responses take in a list of (status_code, model) that is specific to each api request
 
     responses.append((500, None))
 
