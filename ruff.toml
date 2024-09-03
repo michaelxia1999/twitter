@@ -1,0 +1,7 @@
+line-length = 200
+
+[format]
+quote-style = "double"
+
+[lint.isort]
+no-sections = true
