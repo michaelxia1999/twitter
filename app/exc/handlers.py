@@ -24,8 +24,9 @@ async def request_validation_error_handler(request: Request, e: RequestValidatio
 
 
 async def response_validation_error_handler(request: Request, e: ResponseValidationError):
-    # Responses are returned using create_response(which uses JSONResponse under the hood) so they are be all validated by pydantic
+    # Responses are returned using create_response(which uses JSONResponse under the hood)
     # Do not use response_model inside router because you can only provide 1 response model, it doesn't work if your api can return different models
+    # Return using JSONResponse directly and manually add response schemas to openapi for documentation
     print("All routes should return using create_response from app.core")
     return create_response(status_code=500)
 
