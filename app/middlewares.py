@@ -3,6 +3,7 @@ from app.utils import create_response
 from fastapi.requests import Request
 
 
+# Catches all unhandled exception
 async def server_error_middleware(request: Request, call_next):
     try:
         response = await call_next(request)

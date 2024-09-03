@@ -3,6 +3,7 @@ from app.exc.core import ApplicationError
 from fastapi import Depends
 from fastapi.security import APIKeyHeader
 
+# Use cookie instead in production, I'm using header to pass in session id because openapi doesnt allow client(/docs) to pass in cookie
 session_id_header = APIKeyHeader(name="Session-ID", auto_error=False)
 
 

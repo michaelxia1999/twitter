@@ -9,6 +9,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 
 
 async def request_validation_error_handler(request: Request, e: RequestValidationError):
+    # override fastapi default validation schema
     error = e.errors()[0]
 
     if error["msg"] == "JSON decode error":
@@ -23,11 +24,14 @@ async def request_validation_error_handler(request: Request, e: RequestValidatio
 
 
 async def response_validation_error_handler(request: Request, e: ResponseValidationError):
+    # Responses are returned using create_response(which uses JSONResponse under the hood) so they are be all validated by pydantic
+    # Do not use response_model inside router because you can only provide 1 response model, it doesn't work if your api can return different models
     print("All routes should return using create_response from app.core")
     return create_response(status_code=500)
 
 
 async def validation_error_handler(request: Request, e: ValidationError):
+    # Handles all pydantic validation errors within the application
     error = e.errors()[0]
     location = format_validation_error_location(error_location=error["loc"])
     content = Error(location=location, value=error["input"], detail=error["msg"])

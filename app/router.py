@@ -9,6 +9,7 @@ from app.user.router import router as user_router
 from fastapi import APIRouter
 
 router = APIRouter()
+
 router.include_router(router=auth_rouer)
 router.include_router(router=user_router)
 router.include_router(router=tweet_rouer)

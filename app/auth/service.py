@@ -57,4 +57,6 @@ async def invalidate_session(session_id: str) -> bool:
 
 async def invalidate_all_sessions(user_id: int):
     min_created_at = int(time.time())
+
+    # This invalidates all sessions created before this time, use case: user changes passowrd
     await redis.set(name=f"user_id:{user_id}:session_min_created_at", value=str(min_created_at), ex=SESSION_TIMEOUT_SECONDS)
