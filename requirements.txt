@@ -2,3 +2,6 @@ fastapi[standard]
 asyncpg
 sqlalchemy[asyncio]
 redis
+
+pytest-asyncio
+asgi-lifespan

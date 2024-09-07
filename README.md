@@ -128,5 +128,5 @@ backend
 2. Create a virtual environment ```python -m venv .venv```
 3. Enter virtual environment and install all dependencies ```pip install -r requirements.txt```
 4. Spin up Postgres and Redis ```docker compose up```
-5. Start application server ```make run```
+5. Start application server ```python manage.py run```
 6. Open up your browser and go to http://localhost:8000/docs

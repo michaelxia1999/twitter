@@ -14,6 +14,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    print("Starting up...")
     # Use alembic instead in production for database migration
     await create_tables()
     yield
@@ -21,7 +22,8 @@ async def lifespan(app: FastAPI):
     await drop_tables()
     await engine.dispose()
     await redis.flushdb()
-    await redis.close()
+    await redis.aclose()
+    print("Shutting down...")
 
 
 app = FastAPI(lifespan=lifespan)
