@@ -21,7 +21,7 @@
 
 ## Project Structure
 ```
-backend
+twitter
 │   .gitignore
 │   docker-compose.yml
 │   manage.py
