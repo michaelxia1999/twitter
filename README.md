@@ -24,7 +24,7 @@
 backend
 │   .gitignore
 │   docker-compose.yml
-│   Makefile
+│   manage.py
 │   README.md
 │   requirements.txt
 │   ruff.toml
@@ -118,7 +118,13 @@ backend
 │           service.py
 │           __init__.py
 │
+├───images
+│       architecture_diagram.png
+│       database_schema.png
+│
 └───tests
+        pytest.ini
+        test_main.py
         __init__.py
 ```
 
