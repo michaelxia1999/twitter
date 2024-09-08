@@ -20,7 +20,7 @@ async def client(app: FastAPI):
 
 
 @pytest.mark.asyncio(loop_scope="module")
-async def test_where(client: AsyncClient):
+async def test_create_user(client: AsyncClient):
     response = await client.post("/users", json={"username": "username", "password": "password", "email": "email"})
     assert response.status_code == 201
     assert response.json()["username"] == "username"
