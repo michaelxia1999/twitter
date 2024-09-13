@@ -1,5 +1,5 @@
+from app.database.postgres.orm import Tweet
 from app.tweet.models import TweetEdit, TweetIn
-from app.tweet.orm import Tweet
 from app.user.errors import UserNotFound
 from app.user.service import get_user
 from sqlalchemy import delete, insert, select, update

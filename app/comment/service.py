@@ -1,5 +1,5 @@
 from app.comment.models import CommentIn
-from app.comment.orm import Comment
+from app.database.postgres.orm import Comment
 from app.tweet.errors import TweetNotFound
 from app.tweet.service import get_tweet
 from sqlalchemy import delete, insert, select

@@ -1,6 +1,6 @@
+from app.database.postgres.orm import Reaction
 from app.notification.service import create_notification
 from app.reaction.models import ReactionIn
-from app.reaction.orm import Reaction
 from app.tweet.errors import TweetNotFound
 from app.tweet.service import get_tweet
 from sqlalchemy import UniqueConstraint

@@ -1,4 +1,4 @@
-from app.notification.orm import Notification
+from app.database.postgres.orm import Notification
 from app.user.errors import UserNotFound
 from app.user.service import get_user
 from sqlalchemy import insert, select

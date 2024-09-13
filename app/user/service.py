@@ -1,7 +1,7 @@
 from app.auth.service import invalidate_all_sessions
+from app.database.postgres.orm import User
 from app.user.errors import EmailExist, UsernameExist
 from app.user.models import UserEdit, UserIn
-from app.user.orm import User
 from sqlalchemy import delete, insert, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 

@@ -1,9 +1,9 @@
 import json
 import time
 from app.auth.models import UserCredentials
+from app.database.postgres.orm import User
 from app.database.redis.core import redis
 from app.settings import SESSION_TIMEOUT_SECONDS
-from app.user.orm import User
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from uuid import uuid4

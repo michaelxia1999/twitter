@@ -1,6 +1,6 @@
+from app.database.postgres.orm import Message
 from app.message.errors import SameRecipient
 from app.message.models import MessageIn
-from app.message.orm import Message
 from app.user.errors import UserNotFound
 from app.user.service import get_user
 from sqlalchemy import desc, insert, or_, select

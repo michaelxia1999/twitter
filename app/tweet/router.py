@@ -1,8 +1,8 @@
 from app.auth.depends import get_session_user
 from app.database.postgres.core import get_db
+from app.database.postgres.orm import Tweet
 from app.openapi import generate_responses
 from app.tweet.models import TweetEdit, TweetIn, TweetOut
-from app.tweet.orm import Tweet
 from app.tweet.service import (
     create_tweet,
     delete_tweet,

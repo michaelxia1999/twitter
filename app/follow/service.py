@@ -1,6 +1,6 @@
+from app.database.postgres.orm import Follow
 from app.follow.errors import SelfFollow
 from app.follow.models import FollowIn
-from app.follow.orm import Follow
 from app.user.errors import UserNotFound
 from app.user.service import get_user
 from sqlalchemy import UniqueConstraint, delete

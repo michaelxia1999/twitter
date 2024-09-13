@@ -49,7 +49,6 @@ twitter
 │   │
 │   ├───comment
 │   │       models.py
-│   │       orm.py
 │   │       router.py
 │   │       service.py
 │   │       __init__.py
@@ -75,7 +74,6 @@ twitter
 │   ├───follow
 │   │       errors.py
 │   │       models.py
-│   │       orm.py
 │   │       router.py
 │   │       service.py
 │   │       __init__.py
@@ -83,21 +81,18 @@ twitter
 │   ├───message
 │   │       errors.py
 │   │       models.py
-│   │       orm.py
 │   │       router.py
 │   │       service.py
 │   │       __init__.py
 │   │
 │   ├───notification
 │   │       models.py
-│   │       orm.py
 │   │       router.py
 │   │       service.py
 │   │       __init__.py
 │   │
 │   ├───reaction
 │   │       models.py
-│   │       orm.py
 │   │       router.py
 │   │       service.py
 │   │       __init__.py
@@ -105,7 +100,6 @@ twitter
 │   ├───tweet
 │   │       errors.py
 │   │       models.py
-│   │       orm.py
 │   │       router.py
 │   │       service.py
 │   │       __init__.py
@@ -113,7 +107,6 @@ twitter
 │   └───user
 │           errors.py
 │           models.py
-│           orm.py
 │           router.py
 │           service.py
 │           __init__.py
