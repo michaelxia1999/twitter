@@ -2,12 +2,12 @@ from datetime import datetime
 from sqlalchemy import CheckConstraint, ForeignKey, UniqueConstraint, text
 from sqlalchemy.dialects.postgresql import BIGINT, BOOLEAN, TEXT, TIMESTAMP, VARCHAR
 from sqlalchemy.ext.asyncio import AsyncAttrs
-from sqlalchemy.orm import DeclarativeBase, Mapped, MappedAsDataclass, mapped_column
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
-class ORM(AsyncAttrs, DeclarativeBase, MappedAsDataclass):
-    id: Mapped[int] = mapped_column(BIGINT, primary_key=True, autoincrement=True, init=False)
-    created_at: Mapped[datetime] = mapped_column(TIMESTAMP(timezone=True), server_default=text("now()"), init=False)
+class ORM(AsyncAttrs, DeclarativeBase):
+    id: Mapped[int] = mapped_column(BIGINT, primary_key=True, autoincrement=True)
+    created_at: Mapped[datetime] = mapped_column(TIMESTAMP(timezone=True), server_default=text("now()"))
 
 
 class User(ORM):
